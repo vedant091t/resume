@@ -942,17 +942,39 @@
         });
     </script>
 
-    <style>
-        /* Additional mobile styles */
-        @media (max-width: 768px) {
-            .nav-links.active {
-                display: flex;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 5px 15px rgba(
-                    
+   <style>
+    /* Additional mobile styles */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background: white;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-toggle {
+            display: block;
+            cursor: pointer;
+        }
+
+        .nav-toggle-icon {
+            font-size: 1.5rem;
+            color: #333;
+        }
+    }
+
+    /* Hide toggle icon on desktop */
+    .nav-toggle {
+        display: none;
+    }
+</style>
